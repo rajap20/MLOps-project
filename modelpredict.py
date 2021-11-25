@@ -19,39 +19,27 @@ class CreditPredictor():
         self.model = joblib.load(model_file)
         
     def predict(self,
-                V3 = 
-                V4 = 
-                V5 = 
-                V6
-                V7
-                V8
-                V10
-                V11
-                V12
-                V13
-                V14
-                V15
-                V16
-                V17
-                V18
-                V19
-                V20
-                V21
-                V22
- 
-                km_driven = 1.0, 
-                fuel_type = 'Petrol',
-                age = 1,
-                transmission = 'Manual',
-                owner = 'First',
-                seats = 4,
-                make = 'maruti',
-                model = 'swift',
-                mileage = 10.0,
-                engine = 800.0,
-                power = 85.0,
-                location = 'Bangalore'):
-
+                V3 = 'ACH',
+                V4 = 3075,
+                V5 = 530041,
+                V6 = 'AP',
+                V7 = 'DEALER',
+                V8 = 'SC',
+                v9 = 0.470588235,
+                V10 = -0.793281608,
+                V11 = 0.124252057,
+                V12 = -0.093757816,
+                V13 = 87000,
+                V14 = 71000,
+                V15 = 'M',
+                V16 = 'OTHERS',
+                V17 = 'SAL',
+                V18 = 'O',
+                V19 = 0.306122449,
+                V20 = -0.906781205,
+                V21 = 0.158169082,
+                V22 = -1.321152847):
+        
         """
         Predicts the price of an used car given it's attributes.
   
@@ -74,28 +62,35 @@ class CreditPredictor():
             float: The expected sale price of the car in INR Lakhs. For example, 8.5 means the car is expected to be sold at INR 8.5 lakhs.
         """
         
-        car_data = {}
+        credit_data = {}
         
-        car_data['KM_Driven'] = km_driven
-        car_data['Fuel_Type'] = fuel_type
-        car_data['age'] = age
-        car_data['Transmission'] = transmission
-        car_data['Owner_Type'] = owner
-        car_data['Seats'] = seats
-        car_data['make'] = make
-        car_data['model'] = model        
-        car_data['mileage_new'] = mileage
-        car_data['engine_new'] = engine
-        car_data['model'] = model
-        car_data['power_new'] = power
-        car_data['Location'] = location 
+        credit_data['V3'] = V3
+        credit_data['V4'] = V4
+        credit_data['V5'] = V5
+        credit_data['V6'] = V6
+        credit_data['V7'] = V7
+        credit_data['V8'] = V8
+        credit_data['V9'] = V9
+        credit_data['V10'] = V10        
+        credit_data['V11'] = V11
+        credit_data['V12'] = V12
+        credit_data['V13'] = V13
+        credit_data['V14'] = V14
+        credit_data['V15'] = V15
+        credit_data['V16'] = V16
+        credit_data['V17'] = V17
+        credit_data['V18'] = V18
+        credit_data['V19'] = V19
+        credit_data['V20'] = V20
+        credit_data['V21'] = V21
+        credit_data['V22'] = V22 
                 
-        df = pd.DataFrame(car_data, index = [0])
+        df = pd.DataFrame(credit_data, index = [0])
         
         return np.round(self.model.pipeline.predict(df)[0], 2)
 
 if __name__ == "__main__":
-   from usedcar import CarPredictionModel as CarPredictionModel 
+   from MLOps-project import CreditPredictionModel as CreditPredictionModel 
 © 2021 GitHub, Inc.
 Terms
 Privacy
