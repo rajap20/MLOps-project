@@ -7,7 +7,7 @@ import joblib
 import warnings
 from io import BytesIO
 import requests
-from usedcar import CarPredictionModel as CarPredictionModel
+from creditpredict import CreditPredictionModel as CreditPredictionModel
 warnings.filterwarnings('ignore')
 
 model_path = 'https://github.com/rajap20/MLOpsProject/blob/main/creditmodel.pkl?raw=true'
