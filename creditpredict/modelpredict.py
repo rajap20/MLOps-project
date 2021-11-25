@@ -10,7 +10,7 @@ import requests
 from usedcar import CarPredictionModel as CarPredictionModel
 warnings.filterwarnings('ignore')
 
-model_path = 'https://github.com/rajap20/MLOps-project/blob/main/creditmodel.pkl?raw=true'
+model_path = 'https://github.com/rajap20/MLOpsProject/blob/main/creditmodel.pkl?raw=true'
         
 class CreditPredictor():              
         
@@ -90,7 +90,7 @@ class CreditPredictor():
         return np.round(self.model.pipeline.predict(df)[0], 2)
 
 if __name__ == "__main__":
-   from MLOps-project import CreditPredictionModel as CreditPredictionModel 
+   from MLOpsProject import CreditPredictionModel as CreditPredictionModel 
 © 2021 GitHub, Inc.
 Terms
 Privacy
