@@ -20,8 +20,8 @@ class CreditPredictor():
         
     def predict(self,
                 V3 = 'ACH',
-                V4 = 3075,
-                V5 = 530041,
+                V4 = '3075.0',
+                V5 = '530041,
                 V6 = 'AP',
                 V7 = 'DEALER',
                 V8 = 'SC',
