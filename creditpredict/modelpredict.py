@@ -90,16 +90,4 @@ class CreditPredictor():
         return np.round(self.model.pipeline.predict(df)[0], 2)
 
 if __name__ == "__main__":
-   from MLOpsProject import CreditPredictionModel as CreditPredictionModel 
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+   from MLOpsProject import CreditPredictionModel as CreditPredictionModel
