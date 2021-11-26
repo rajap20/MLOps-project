@@ -10,7 +10,7 @@ import requests
 from creditpredict import CreditPredictionModel as CreditPredictionModel
 warnings.filterwarnings('ignore')
 
-model_path = 'https://github.com/rajap20/mlopsproject/blob/main/creditmodel.pkl?raw=true'
+model_path = 'https://github.com/rajap20/MLOpsProject/blob/main/creditpredict/creditmodel.pkl?raw=true'
         
 class CreditPredictor():              
         
