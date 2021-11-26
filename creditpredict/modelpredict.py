@@ -44,23 +44,32 @@ class CreditPredictor():
         Predicts the price of an used car given it's attributes.
   
         Parameters:
-            km_driven (float): Kilometer driven by the car (odometer reading) in 1000 kms. E.g. 5.5 indicates 5500 km. driven.
-            fuel_type (str): 'Petrol' or 'Diesel': Default is 'Petrol'
-            age: (int): Number of years since car is bought.
-            transmission (str): 'Manual' or 'Automatic': Default is 'Manual'
-            owner (str): 'First' or 'Second' or 'Third'. Default is 'First'
-            seats (int): Number of seats. Default is 4.
-            make (str): Currently it supports only 'maruti' or 'hyundai'. Default is 'maruti'.
-            model (str): 'alto' or 'swift' or 'desire' or 'zen'. Default is 'swift'
-            mileage (float): Mileage of the car in km per liter. Default is 10.0
-            engine (float): Engine capacity of the car in cc. Default is 800.0 cc.
-            power (float): Power of the car in bhp. Default is 85.0 bhp. 
-            location (str): Which location the car is available for the sell. 'Bangalore' or 'Hyderabad' or 'Mumbai' or 'Chennai'. Default is 'Bangalore'
-            
-          
+         V3 (str): "Payment Type" ("ACH", "ADM", "DRE", "DAS", "ENCH", "PDC")
+         V4 (str): "Area Code"
+         V5 (str): "Pin code"
+        V6 (str): "State" ("AP", "AS", "BR", "CG", "DL", "UP", "HA", "GJ", "HP", "CH", "JH",
+               "JK", "KA", "KL", "MH", "MP", "OR", "TN", "PY", "PB", "RJ", "WB",
+               "UC", "TR", "MN")
+        V7 (str) : "Dealer Type", ("DEALER", "ASC"), default="DEALER"
+        V8 (str) : ["SC", "MO", "MC", "EB"], default="SC", label = "Product Code (SC: Scooter, MO: Moped, MC: Motorcycle, EB: Electric Bike)"
+        V9 (float) : (default=0.470588	, label="Tenure")
+        V10 (float) : (default=-0.793282, label="Rate of Interest")
+        V11 (float) : (default=0.124252, label="EMI")
+        V12 (float) :(default=-0.093758, label="Processing Fee")
+        V13 (float) : (default=87000.0, label="Asset cost")
+        V14 (float) : (default=71000.0, label="Loan Amount")
+        V15 (str) : (["M", "F"], default="M", label = "Gender")
+        V16 (str) : (["OTHERS", "PG", "SSC", "HSC", "UG"], default="OTHERS", label = "Qualification")
+        V17 (str) : (["SAL", "SEP", "AGR", "STU", "OTH", "PEN", "HOW"], default="SAL", label = "Employment type (SAL: Salaried, AGR: Agriculture, HOW: Housewife, OTH: Others, STU: Student, SEP: Self-employed, PEN: Pension)")
+        V18 (str) : (["O", "R", "L"],  default="O", label = "Residence Type (O: Owned, R: Rented, L: Leased)")
+        V19 (float) : (default=0.306122, label="Age")
+        V20 (float) : (default=-0.906781, label="CIBIL Score")
+        V21 (float) : (default=	0.158169, label="Net Salary")
+        V22 (float) : (default=-1.321153, label="Net Internal Rate of return")
+                   
         Returns:
-            float: The expected sale price of the car in INR Lakhs. For example, 8.5 means the car is expected to be sold at INR 8.5 lakhs.
-        """
+            float: The output shows the probability of default of the candidate
+            """
         
         credit_data = {}
         
