@@ -18,27 +18,42 @@ class CreditPredictor():
         model_file = BytesIO(requests.get(model_path).content)
         self.model = joblib.load(model_file)
         
+        
     def predict(self,
-                V3 = 'ACH',
-                V4 = '3075.0',
-                V5 = '530041',
-                V6 = 'AP',
-                V7 = 'DEALER',
-                V8 = 'SC',
-                V9 = 0.470588235,
-                V10 = -0.793281608,
-                V11 = 0.124252057,
-                V12 = -0.093757816,
-                V13 = 87000,
-                V14 = 71000,
-                V15 = 'M',
-                V16 = 'OTHERS',
-                V17 = 'SAL',
-                V18 = 'O',
-                V19 = 0.306122449,
-                V20 = -0.906781205,
-                V21 = 0.158169082,
-                V22 = -1.321152847):
+                 area_code  =  3075.0,
+                 asset_cost  =  87000.0,
+                 state  =  "AP",
+                 loan_amt  =  71000.0,
+                 resid_type  =  "O",
+                 emi  =  0.124252,
+                 net_irr  =  1.321153,
+                 net_salary  =  0.158169,
+                 proc_fee  =  0.093758,
+                 roi  =  0.793282,
+                 age  =  0.306122,
+                 tenure  =  0.470588):
+
+   # def predict(self,
+   #             V3 = 'ACH',
+   #             V4 = '3075.0',
+   #             V5 = '530041',
+   #             V6 = 'AP',
+   #             V7 = 'DEALER',
+   #             V8 = 'SC',
+   #             V9 = 0.470588235,
+   #             V10 = -0.793281608,
+   #             V11 = 0.124252057,
+   #             V12 = -0.093757816,
+   #             V13 = 87000,
+   #             V14 = 71000,
+   #             V15 = 'M',
+   #             V16 = 'OTHERS',
+   #             V17 = 'SAL',
+   #             V18 = 'O',
+   #             V19 = 0.306122449,
+   #             V20 = -0.906781205,
+   #             V21 = 0.158169082,
+   #             V22 = -1.321152847):
         
         """
         Predicts the price of an used car given it's attributes.
@@ -73,26 +88,40 @@ class CreditPredictor():
         
         credit_data = {}
         
-        credit_data['V3'] = V3
-        credit_data['V4'] = V4
-        credit_data['V5'] = V5
-        credit_data['V6'] = V6
-        credit_data['V7'] = V7
-        credit_data['V8'] = V8
-        credit_data['V9'] = V9
-        credit_data['V10'] = V10        
-        credit_data['V11'] = V11
-        credit_data['V12'] = V12
-        credit_data['V13'] = V13
-        credit_data['V14'] = V14
-        credit_data['V15'] = V15
-        credit_data['V16'] = V16
-        credit_data['V17'] = V17
-        credit_data['V18'] = V18
-        credit_data['V19'] = V19
-        credit_data['V20'] = V20
-        credit_data['V21'] = V21
-        credit_data['V22'] = V22 
+        credit_data['area_code'] = area_code
+        credit_data['asset_cost'] = asset_cost
+        credit_data[' state'] =  state
+        credit_data[' loan_amt'] =  loan_amt
+        credit_data[' resid_type'] =  resid_type
+        credit_data[' emi'] =  emi
+        credit_data[' net_irr'] =  net_irr
+        credit_data[' net_salary'] =  net_salary
+        credit_data[' proc_fee'] =  proc_fee
+        credit_data[' roi'] =  roi
+        credit_data[' age'] =  age
+        credit_data[' tenure'] =  tenure
+
+
+        #credit_data['V3'] = V3
+        #credit_data['V4'] = V4
+        #credit_data['V5'] = V5
+        #credit_data['V6'] = V6
+        #credit_data['V7'] = V7
+        #credit_data['V8'] = V8
+        #credit_data['V9'] = V9
+        #credit_data['V10'] = V10        
+        #credit_data['V11'] = V11
+        #credit_data['V12'] = V12
+        #credit_data['V13'] = V13
+        #credit_data['V14'] = V14
+        #credit_data['V15'] = V15
+        #credit_data['V16'] = V16
+        #credit_data['V17'] = V17
+        #credit_data['V18'] = V18
+        #credit_data['V19'] = V19
+        #credit_data['V20'] = V20
+        #credit_data['V21'] = V21
+        #credit_data['V22'] = V22 
                 
         df = pd.DataFrame(credit_data, index = [0])
         
