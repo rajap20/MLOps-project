@@ -90,16 +90,16 @@ class CreditPredictor():
         
         credit_data['area_code'] = area_code
         credit_data['asset_cost'] = asset_cost
-        credit_data[' state'] =  state
-        credit_data[' loan_amt'] =  loan_amt
-        credit_data[' resid_type'] =  resid_type
-        credit_data[' emi'] =  emi
-        credit_data[' net_irr'] =  net_irr
-        credit_data[' net_salary'] =  net_salary
-        credit_data[' proc_fee'] =  proc_fee
-        credit_data[' roi'] =  roi
-        credit_data[' age'] =  age
-        credit_data[' tenure'] =  tenure
+        credit_data['state'] =  state
+        credit_data['loan_amt'] =  loan_amt
+        credit_data['resid_type'] =  resid_type
+        credit_data['emi'] =  emi
+        credit_data['net_irr'] =  net_irr
+        credit_data['net_salary'] =  net_salary
+        credit_data['proc_fee'] =  proc_fee
+        credit_data['roi'] =  roi
+        credit_data['age'] =  age
+        credit_data['tenure'] =  tenure
 
 
         #credit_data['V3'] = V3
