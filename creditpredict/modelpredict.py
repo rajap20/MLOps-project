@@ -20,7 +20,7 @@ class CreditPredictor():
         
         
     def predict(self,
-                 area_code  =  3075.0,
+                 area_code  =  "3075.0",
                  asset_cost  =  87000.0,
                  state  =  "AP",
                  loan_amt  =  71000.0,
